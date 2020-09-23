@@ -17,6 +17,9 @@ body ul.list {
 body ul.list li.item {
     display: inline-block;
 }
+body ul.list li.item label.strikethrough {
+    text-decoration: lin;
+}
 
 /* hide items outside of list (the item template) */
 body li.item {

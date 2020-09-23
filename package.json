@@ -1,0 +1,27 @@
+{
+  "name": "javascripttodolist-pla",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HadenHiles/JavascriptTodoList-PLA.git"
+  },
+  "author": "Haden Hiles <hadenhiles@gmail.com> (https://github.com/hadenhiles)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HadenHiles/JavascriptTodoList-PLA/issues"
+  },
+  "homepage": "https://github.com/HadenHiles/JavascriptTodoList-PLA#readme",
+  "keywords": [],
+  "description": ""
+}
