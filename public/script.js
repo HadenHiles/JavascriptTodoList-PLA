@@ -44,6 +44,12 @@ function renderTodoList() {
         if (listItems.items && listItems.items.length > 0) {
             list.innerHTML = ""; // Clear the default text
 
+            // re-order the list based on checked values
+            listItems.items.sort(function(item1, item2) {
+                // false values first
+                return (item1 === item2)? 0 : item1.data.checked? 1 : -1;
+            });
+            
             // Loop through the list items in the json file
             listItems.items.forEach(item => {
                 var existingItem = buildItem(item); // generate item from the template
