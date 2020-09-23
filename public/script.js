@@ -22,6 +22,7 @@ window.addEventListener('load', function () {
                 document.getElementById('item-text').value = ""; // reset the item text input value
             });
 
+            // Reset the input in case there was an error
             itemText.removeAttribute('class');
             itemText.setAttribute('placeholder', 'Enter todo item here');
         } else {
@@ -96,6 +97,10 @@ function deleteItem(id) {
     });
 }
 
+/**
+ * Toggles the completed status of a given item id (uuid)
+ * @param {String} id 
+ */
 function toggleComplete(id) {
     // toggle the ui strikethrough regardless of server success
     var children = document.getElementById(id).childNodes;
@@ -104,6 +109,9 @@ function toggleComplete(id) {
     if (checkbox.checked) {
         checkbox.removeAttribute('checked');
         itemText.removeAttribute('class');
+
+        var list = document.querySelector('.list'); // Create references to the list
+        list.append(document.getElementById(id)); // Move the item to the bottom of the list
     } else {
         checkbox.setAttribute('checked', true);
         itemText.setAttribute('class', 'strikethrough');
