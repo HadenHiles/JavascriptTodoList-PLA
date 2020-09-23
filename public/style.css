@@ -15,10 +15,10 @@ body ul.list {
     margin: 15px auto;
 }
 body ul.list li.item {
-    display: inline-block;
+    display: block;
 }
 body ul.list li.item label.strikethrough {
-    text-decoration: lin;
+    text-decoration: line-through;
 }
 
 /* hide items outside of list (the item template) */

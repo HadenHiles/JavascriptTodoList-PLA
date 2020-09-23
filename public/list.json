@@ -2,6 +2,10 @@
     "items": [
         {
             "title": "Complete this PLA",
+            "checked": true
+        },
+        {
+            "title": "Get back to work",
             "checked": false
         }
     ]
