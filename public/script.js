@@ -3,6 +3,38 @@ window.addEventListener('load', function () {
     * LOAD list.json contents
     */
     // Retrieve current items from the list.json
+    renderTodoList();
+
+    /*
+    * EVENTS
+    */
+    // Add button
+    document.getElementById('add-item').addEventListener('click', () => {
+        var list = document.querySelector('.list'); // create reference to the list element
+        var itemText = document.getElementById('item-text') // get the input text
+
+        // validate the input
+        if (itemText.value != "" && itemText.value != null) {
+            // call the server and update dom after successful creation in list.json
+            httpGetAsync(`/add?title=${itemText.value}`, (item) => {
+                var newItem = buildItem(item); // get a new list item from the template
+                list.append(newItem); // append the item to the list in the DOM
+                document.getElementById('item-text').value = ""; // reset the item text input value
+            });
+
+            itemText.removeAttribute('class');
+            itemText.setAttribute('placeholder', 'Enter todo item here');
+        } else {
+            itemText.setAttribute('class', 'error');
+            itemText.setAttribute('placeholder', 'Please enter a value');
+        }
+    });
+});
+
+/**
+ * Render the items in the list.json todo list
+ */
+function renderTodoList() {
     loadJSON('/list', (items) => {
         var listItems = items; // assign the json response to a variable for looping through
         var list = document.querySelector('.list'); // Create references to the list
@@ -19,23 +51,7 @@ window.addEventListener('load', function () {
             });
         }
     });
-
-    /*
-    * EVENTS
-    */
-    // Add button
-    document.getElementById('add-item').addEventListener('click', () => {
-        var list = document.querySelector('.list'); // create reference to the list element
-        var itemText = document.getElementById('item-text').value; // get the input text value
-
-        // call the server and update dom after successful creation in list.json
-        httpGetAsync(`/add?title=${itemText}`, (item) => {
-            var newItem = buildItem(item); // get a new list item from the template
-            list.append(newItem); // append the item to the list in the DOM
-            document.getElementById('item-text').value = ""; // reset the item text input value
-        });
-    });
-});
+}
 
 /**
  * Generate a new list item from the item template html

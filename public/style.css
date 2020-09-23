@@ -11,6 +11,21 @@ body h1 {
     margin: 15px auto;
 }
 
+body input#item-text.error {
+    border: 1px solid #cc0000;
+}
+body input#item-text.error::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+body input#item-text.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+body input#item-text.error::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
 body ul.list {
     margin: 15px auto;
     padding: 0;
