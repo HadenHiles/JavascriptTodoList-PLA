@@ -2,6 +2,6 @@
 A simple vanilla javascript todo list for my intro to javascript PLA at Georgian College
 
 ## Running
-- Run npm install to setup dependencies
-- Run 'npm run start' to fire up the express server
-- Go to http://localhost:8080
+- `npm install` to setup dependencies
+- `npm run start` to fire up the express server
+- Visit (http://localhost:8080)
