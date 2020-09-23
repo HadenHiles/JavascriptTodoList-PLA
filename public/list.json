@@ -1,12 +1,1 @@
-{
-    "items": [
-        {
-            "title": "Complete this PLA",
-            "checked": true
-        },
-        {
-            "title": "Get back to work",
-            "checked": false
-        }
-    ]
-}
+{"items":[{"uuid":"22eee365-1d7e-44d7-8d4d-dc0764e0b1a3","data":{"title":"Finish this PLA","checked":true}},{"uuid":"6247b1d9-f51b-42c8-968e-d7885e86d38f","data":{"title":"Get back to work","checked":false}}]}

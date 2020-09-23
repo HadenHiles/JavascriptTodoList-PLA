@@ -26,9 +26,10 @@
         <form>
             <label for="item-text">Add todo item:</label>
             <input type="text" maxlength="100" id="item-text" placeholder="Enter todo item here" required />
-            <button id="add-item" type="submit">Add</button>
+            <button id="add-item" type="button">Add</button>
         </form>
 
+        <!-- The todo list -->
         <ul class="list">
             <!-- Default text before any items are added -->
             <p>Nothing to do yet :D</p>
@@ -38,6 +39,7 @@
         <li class="item" id="item-template">
             <input type="checkbox" name="item-check" class="item-check" />
             <label for=""></label>
+            <button type="button" class="delete">Delete</button>
         </li>
     </div>
 

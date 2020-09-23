@@ -13,12 +13,18 @@ body h1 {
 
 body ul.list {
     margin: 15px auto;
+    padding: 0;
 }
 body ul.list li.item {
     display: block;
+    margin: 5px auto;
+    clear: both;
 }
 body ul.list li.item label.strikethrough {
     text-decoration: line-through;
+}
+body ul.list li.item button.delete {
+    float: right;
 }
 
 /* hide items outside of list (the item template) */
