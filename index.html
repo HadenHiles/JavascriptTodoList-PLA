@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Todo List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" tabindex="text/css" href="style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="content">
+        <h1>Haden's Epic Todo List</h1>
+
+        <!-- So that html validation works -->
+        <form>
+            <label for="item-text">Add todo item:</label>
+            <input type="text" maxlength="100" id="item-text" placeholder="Enter todo item here" required />
+            <button id="add-item" type="submit">Add</button>
+        </form>
+
+        <ul class="list">
+            <!-- Default text before any items are added -->
+            <p>Nothing to do yet :D</p>
+        </ul>
+
+        <!-- Template for list items (hidden by css when outside of list container -->
+        <li class="item">
+            <input type="checkbox" name="item-check" id="" />
+            <label for=""></label>
+        </li>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

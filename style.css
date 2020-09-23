@@ -1,0 +1,24 @@
+body {
+    background: #e6e6e6;
+}
+
+body .content {
+    width: 400px;
+    margin: 50px auto;
+}
+
+body h1 {
+    margin: 15px auto;
+}
+
+body ul.list {
+    margin: 15px auto;
+}
+body ul.list li.item {
+    display: inline-block;
+}
+
+/* hide items outside of list (the item template) */
+body li.item {
+    display: none;
+}
